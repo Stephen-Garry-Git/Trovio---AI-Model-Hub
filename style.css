@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #000000;
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.background-glow {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgb(5, 6, 83), transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  position: relative;
+  z-index: 2;
+    background: rgba(0, 0, 0, 0.8),;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Satoshi', 'Inter', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.nav-links a {
+  color: #cbd5e1;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #60a5fa;
+}
+
+.btn {
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary {
+  background-color: white;
+  color: black;
+}
+
+.btn-primary:hover {
+  background-color: #020c2e;
+    color: white;
+    box-shadow: white 0px 0px 0px 2px, white 0px 0px 0px 4px, white 0px 0px 0px 6px, white 0px 0px 0px 8px, white 0px 0px 0px 10px;
+}
+
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.top-tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.top-tags span {
+  background: #1e293b;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #93c5fd;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 70;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg, #ffffff, #3f60f1);
+  background-clip: text;
+  color: transparent;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  background: #ffffff;
+  border: 1px solid #334155;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #000000;
+}
+
+.cta-buttons {
+  margin-bottom: 3rem;
+}
+
+.dashboard-preview {
+  margin-top: 2rem;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0  10px 40px rgba(7, 25, 189, 0.6);
+  animation: glow-and-move 4s infinite alternate ease-in-out;
+}
+
+@keyframes glow-and-move {
+  0% {
+    box-shadow: 0 10px 40px rgba(7, 25, 189, 0.6);
+    transform: translate(0, 0); /* Start position */
+  }
+  25% {
+    box-shadow: 0 10px 60px rgba(7, 25, 189, 0.8), 0 0 20px rgba(255, 255, 255, 0.3); /* Brighter glow, added white inner glow */
+    transform: translate(10px, -5px); /* Move slightly */
+  }
+  50% {
+    box-shadow: 0 10px 40px rgba(7, 25, 189, 0.6);
+    transform: translate(0, 0); /* Return to start, or another position */
+  }
+  75% {
+    box-shadow: 0 10px 60px rgba(7, 25, 189, 0.8), 0 0 20px rgba(255, 255, 255, 0.3); /* Brighter glow */
+    transform: translate(-10px, 5px); /* Move in opposite direction */
+  }
+  100% {
+    box-shadow: 0 10px 40px rgba(7, 25, 189, 0.6);
+    transform: translate(0, 0); /* Back to original */
+  }
+}
+
+.dashboard-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer {
+  background-color: #000000;
+  padding: 3rem 2rem;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-links a {
+  margin-left: 1.5rem;
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #60a5fa;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-socials a {
+  margin-left: 1rem;
+  color: #94a3b8;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #60a5fa;
+}
